@@ -7,7 +7,7 @@
 */
 int print_str(va_list current_fmt)
 {
-	int counter = 0; 
+	int counter = 0;
 	char *str;
 
 	str = va_arg(current_fmt, char *);
@@ -16,7 +16,6 @@ int print_str(va_list current_fmt)
 	{
 		str = "(null)";
 	}
-	/** printf("%s\n", str); **/
 	while (str[counter])
 	{
 		_putchar(str[counter]);
