@@ -1,0 +1,32 @@
+.TH _printf 3 "July 24, 2020" "Holberton School 0x11. C _printf"
+
+.SH NAME
+.B _printf
+- Format output to be printed
+
+.SH SYNOPSIS
+.B int printf(const char *\flformat\fB, ...);
+
+.SH DESCRIPTION
+.B _printf
+The \fB_printf\fR provides the output according to formatted specifiers.
+
+.SH List of Formats
+
+.IP %c
+- Character input argument is printed 
+
+.IP %s
+- String input argument is printed
+
+.IP %%
+- Argument is not given, therefore print '%' sign
+
+.IP %i
+- Integer input argument is printed
+
+.IP %d
+- Signed integer input arumgnet is printed
+
+.SH AUTHOR
+Written by Jasmine Choi 
