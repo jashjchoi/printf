@@ -22,5 +22,5 @@ int (*check_spec(char f))(va_list)
 		}
 		i++;
 	}
-	return (NULL);
+	return (0);
 }
