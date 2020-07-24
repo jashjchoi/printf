@@ -1,0 +1,24 @@
+#include "holberton.h"
+/**
+* print_str - prints string
+* @current_fmt: list of string to print
+* Return: str counter, or null if str = NULL
+*/
+int print_str(va_list current_fmt)
+{
+	int counter;
+	char *str;
+
+	str = va_arg(current_fmt, char *);
+
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
+	while (str[counter])
+	{
+		_putchar(str[counter]);
+		counter++;
+	}
+	return (counter);
+}
