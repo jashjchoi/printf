@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
 * print_str - prints string
 * @current_fmt: list of string to print
@@ -6,7 +7,7 @@
 */
 int print_str(va_list current_fmt)
 {
-	int counter;
+	int counter = 0; 
 	char *str;
 
 	str = va_arg(current_fmt, char *);
@@ -15,6 +16,7 @@ int print_str(va_list current_fmt)
 	{
 		str = "(null)";
 	}
+	/** printf("%s\n", str); **/
 	while (str[counter])
 	{
 		_putchar(str[counter]);
