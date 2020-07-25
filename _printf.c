@@ -29,7 +29,16 @@ int _printf(const char *format, ...)
 			else
 			{
 				func = check_spec(format[i]);
-				counter += func(current_fmt);
+				if (func == NULL)
+				{
+					counter++;
+					_putchar(format[i -1]);
+					_putchar(format[i]);
+				}
+				else
+				{
+					counter += func(current_fmt);
+				}
 			}
 		}
 		else
