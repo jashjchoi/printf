@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 				if (func == NULL)
 				{
 					counter++;
-					_putchar(format[i -1]);
+					_putchar(format[i - 1]);
 					_putchar(format[i]);
 				}
 				else
