@@ -6,15 +6,12 @@
 */
 int _printf(const char *format, ...)
 {
-	int i;
-	int counter = 0;
+	int i, counter = 0;
 	va_list current_fmt;
 	int (*func)(va_list);
 
 	if (format == NULL)
-	{
 		return (-1);
-	}
 	va_start(current_fmt, format);
 	for (i = 0; format != NULL && format[i] != '\0'; i++)
 	{
