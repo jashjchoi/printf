@@ -6,7 +6,7 @@
 */
 int (*check_spec(char f))(va_list)
 {
-	int i = 0;
+	int i;
 	fmt_t fmt_spec[] = {
 		{'c', print_char},
 		{'s', print_str},
@@ -14,13 +14,12 @@ int (*check_spec(char f))(va_list)
 		{'d', print_int},
 		{'\0', NULL}
 	};
-	while (fmt_spec[i].type != '\0')
+	for (i = 0; fmt_spec[i].type != '\0'; i++)
 	{
 		if (fmt_spec[i].type == f)
 		{
 			return (fmt_spec[i].func);
 		}
-		i++;
 	}
-	return (0);
+	return (NULL);
 }
